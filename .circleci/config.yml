@@ -14,4 +14,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - rsync -va --delete ./_site username@my-website:/var/html
+      - rsync -va --delete ./_site ialeksandrov.io@my-website:/var/html
