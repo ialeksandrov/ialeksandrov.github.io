@@ -1,3 +1,9 @@
+#!/bin/bash
+
+USER_EMAIL='ialeksandrov1990@abv.bg'
+USER_NAME='ialeksandrov'
+
+
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
