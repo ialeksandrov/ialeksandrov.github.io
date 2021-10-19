@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+dependabot/bundler/addressable-2.8.0
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
@@ -21,7 +22,7 @@ GEM
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
-      kramdown (~> 1.14)
+      kramdown (~> 2.3.1)
       liquid (~> 4.0)
       mercenary (~> 0.3.3)
       pathutil (~> 0.9)
@@ -35,7 +36,7 @@ GEM
       jekyll (~> 3.3)
     jekyll-watch (1.5.1)
       listen (~> 3.0)
-    kramdown (1.17.0)
+    kramdown (>= 2.3.1)
     liquid (4.0.3)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
