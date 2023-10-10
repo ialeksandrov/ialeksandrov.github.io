@@ -29,7 +29,6 @@ Choose a device:
 
 Then During the system reboot, I faced the same errors again:
 
-
 ```
 1) "Reading ME Firmware... Please do not power off! 50% Completed"
 2) "Recovering ME Firmware...Please do not power off! 10% Completed"
