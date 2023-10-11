@@ -12,6 +12,7 @@ $ vault operator raft snapshot save backup.snap
 This will take the snapshot using a consistent mode that forwards the request to the cluster leader, and the leader will verify it is still in power before taking the snapshot.
 
 Store these snapshots in a secure place away from the Vault clusters. For example you can use S3 bucket.
+
 NOTE: Backup process can be automated with a short shell script using this command plus a logic for snapshots retention.
 ### Restore
 Bring the Vault cluster back online following the circumstances that required you to restore from the backup. You will need to reinitialise the Vault cluster and log in with the new root token generated during its reinitialisation. Note that these will be temporary- the original unseal keys will be needed following restore.
