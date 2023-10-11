@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 ### How to fix sound card not detected - DummyOutput in sound settings after broken firmware upgade: Failed to recover ME Firmware
 
-After a firmware update I've started experiencing a sound issue on lenovo ThinkPad T15 having Ubuntu 22.04.
+After a firmware update I've started experiencing a sound issue on Lenovo ThinkPad T15 having Ubuntu 22.04.
 There is no sound at all, the sound settings displaying a single "Dummy Output" entry.
 This issue was really annoying and I solved it after a long time Googling.
 To Solve this issue open a terminal and execute:
