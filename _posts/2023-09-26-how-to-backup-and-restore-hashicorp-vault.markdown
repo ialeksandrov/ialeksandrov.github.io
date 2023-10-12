@@ -40,6 +40,10 @@ seal "awskms" {
 }
 ```
 
+NOTE: The snapshot contains Data Encryption Key, which is encrypted by the aws KMS. If your vault running on minikube doesn’t have access to that KMS, the newly restored vault will not unseal.
+
+This is designed to protect the snapshot.
+
 If you are not feeling comfortable restoring with CLI there is also a GUI Version from your fresh Vault instance.
 When you authenticate you will see a drop-down button “Status” → “Raft Storage” → “Snapshots” → “Restore”
 After this, there will be an option to provide a snapshot file.
