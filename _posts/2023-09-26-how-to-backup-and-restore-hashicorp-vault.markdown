@@ -40,7 +40,7 @@ seal "awskms" {
 }
 ```
 
-NOTE: The snapshot contains Data Encryption Key, which is encrypted by the aws KMS. If your vault running on minikube doesn’t have access to that KMS, the newly restored vault will not unseal.
+NOTE: The snapshot contains Data Encryption Key, which is encrypted by the aws KMS. If your vault doesn’t have access to that KMS, the newly restored vault will not unseal.
 
 This is designed to protect the snapshot.
 
