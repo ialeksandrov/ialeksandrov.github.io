@@ -17,7 +17,7 @@ NOTE: Backup process can be automated with a short shell script using this comma
 ### Restore
 Bring the Vault cluster back online following the circumstances that required you to restore from the backup. You will need to reinitialise the Vault cluster and log in with the new root token generated during its reinitialisation. Note that these will be temporary- the original unseal keys will be needed following restore.
 
-Copy the Vault Raft Snapshot file onto a Vault cluster member and run the below command, replacing the filename with that of your snapshot file. Note, the ```-force``` option is required here since the Auto-unseal or Shamir keys will not be consistent with the snapshot data as you will be restoring a snapshot from a different cluster. Snapshots can be stored S3 bucket. To copy a snapshot from S3 execute:
+Copy the Vault Raft Snapshot file onto a Vault cluster member and run the below command, replacing the filename with that of your snapshot file. Note, the ```-force``` option is required here since the Auto-unseal or Shamir keys will not be consistent with the snapshot data as you will be restoring a snapshot from a different cluster. Snapshots can be stored in S3 bucket. To copy a snapshot from S3 execute:
 
 ```shell
 $ aws s3 cp s3://<bucket_name>/backup.snapshot . 
