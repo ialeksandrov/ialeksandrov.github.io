@@ -23,7 +23,7 @@ $ vault write -f -format=json auth/approle/role/prometheus-metrics/secret-id |jq
 After we have the output from these two commands we can proceed to renewing the token.\
 We are doing it with the following command:
 ```
-$ curl -X POST -d '{"role_id":"daa6c984-2772-7544-3037-4873551b1844", "secret_id":"ed8ee1a6-09a4-abff-079b-389889e3d65f"}' https://<vault-host>/v1/auth/approle/login -sS | jq -r '.auth.client_token'
+$ curl -X POST -d '{"role_id":"daa6c984-2772-7544-3037-4873551b1844", "secret_id":"ed8ee1a6-09a4-abff-079b-389889e3d65f"}' https://<vault-host>/v1/auth/approle/login -sS | jq -r '.auth.client_token' > /etc/prometheus/prometheus-token
 ```
 To automate these manual step we can put this curl query in a shell script which will be executed by a cron job on every
 24 hours. This way you skip the manual token renewal every 32 days.
