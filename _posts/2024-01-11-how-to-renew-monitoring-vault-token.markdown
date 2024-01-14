@@ -7,13 +7,12 @@ categories: jekyll update
 
 You probably had the problem to have an expired token for your monitoring in the most inappropriate moment (your
  vacation for example). The default ttl for this Prometheus token in most times is 32 days. There a lot of ways to solve
-this issue. I managed to solve it in the following way:\
-We are creating an app role for prometheus-metrics:
+this issue. I managed to solve it in the following way. We are creating an app role for prometheus-metrics:
 ```
 $ vault write auth/approle/role/prometheus-metrics token_ttl=25h token_max_ttl=168h secret_id_ttl=0 token_policies=prometheus-metrics
 ```
-The important option here is <b>token_ttl=25h</b>.\
-We are extracting the <b>role_id</b> and <b>secret_id</b>:\
+The important option here is <b>token_ttl=25h</b>.
+We are extracting the <b>role_id</b> and <b>secret_id</b>:
 ```
 $ vault read -format=json auth/approle/role/prometheus-metrics/role-id |jq -r .data.role_id
 ```
