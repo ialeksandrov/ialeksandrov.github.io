@@ -22,4 +22,4 @@ listener "tcp" {
   }
 }
 ```
-NOTE: We are setting "unauthenticated_metrics_access" to "true". This allow us to retrieve metrics even when the Vault is sealed we can use the metrics to create alarms.
+NOTE: We are setting "unauthenticated_metrics_access" to "true". This allow us to retrieve metrics even when the Vault is sealed. We can use the metrics to create alarms.
