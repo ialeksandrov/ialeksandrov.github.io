@@ -6,9 +6,10 @@ categories: jekyll update
 ---
 We are enabling the metrics with the following configuration:
 ``` 
-  telemetry {
+telemetry {
     disable_hostname = true
     prometheus_retention_time = "12h"
+}
 ```
 
 By design after sealing your Vault the monitoring metrics become unavailable("vault.core.unsealed" for example).
